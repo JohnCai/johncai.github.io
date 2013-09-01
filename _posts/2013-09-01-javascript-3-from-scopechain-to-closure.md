@@ -65,7 +65,7 @@ function Outer(x){
 }        //在globalContext中创建Outer这个Function
 
 var inner = Outer(1); //执行Outer函数时进入新创建的outerFunctionContext上下文。
-　　　　　　　　　　　　   //然后退出，回到globalContext，把Outer(1)的返回值赋给inner这个变量。
+                      //然后退出，回到globalContext，把Outer(1)的返回值赋给inner这个变量。
 inner(2);  //进入InnerContext，执行Inner函数的return x + y，然后退出，回到globalContext
 ```
 
@@ -131,12 +131,12 @@ this = global;
 //以上是进入globalContext时所做的事情
  
 //以下开始执行代码。
-　　a = 1;  //variable.a 此时才被赋值。
-　　function Outer(x){
-      　　function Inner(y){return x + y;}
-      　　return Inner
-　　}      
-　　var inner = Outer(1); //这段代码用伪代码表示如下：
+a = 1;  //variable.a 此时才被赋值。
+function Outer(x){
+    function Inner(y){return x + y;}
+    return Inner;
+}      
+var inner = Outer(1); //这段代码用伪代码表示如下：
 //Outer(1)，会执行Outer函数，因此进入新创建的outerFunctionContext上下文
 //1.创建ouerFunctionContext的Scope Chain，并放入Outer函数的[[Scope]]里所有的object
 outerFunctionContext.ScopeChain = [];
@@ -152,7 +152,7 @@ outerVariable.Inner = new Function('y', 'return x + y', [outerVariable, global])
 
 //最后回到globalContext中，把新建的Inner函数对象，返回给inner变量。
 
-　　inner(2);  //最后执行的这句代码，将创建并进入InnerContext。
+inner(2);  //最后执行的这句代码，将创建并进入InnerContext。
 ```
 
  
