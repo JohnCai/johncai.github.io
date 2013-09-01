@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Javascript必知必会——new以及构造器是如何工作的"
+title: "我的Javascript之旅——new以及构造器是如何工作的"
 description: "当用new关键字创建一个对象时，都发生了什么？"
 category: Javascript
 tags: [Javascript]
@@ -9,14 +9,14 @@ tags: [Javascript]
 
 **(迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2010/08/25/1808285.html))**
 
-[接上!](/javascript/2013/08/24/javascript-1-prototype/ "Javascript必知必会——对象的原型链是如何实现的")
+[接上](/javascript/2013/08/24/javascript-1-prototype/ "我的Javascript之旅——对象的原型链是如何实现的")
 先看张对老手不新鲜但对菜鸟很有趣的图：
 
 ![1](/uploads/20130831/1.png)
 
 What the heck is that? 简直是luan lun。 
 
-#####new
+###new
 
 抛开上面的图，先看看上篇文章留下的第二个问题，让我们在构造器的函数体内加点东西，看会发生什么。
  
@@ -59,7 +59,7 @@ return x;
 
  
 
-#####对象的constructor属性
+###对象的constructor属性
 
 再看看上篇文章留下的第一个问题
 
@@ -80,7 +80,7 @@ var d =new Derived()
 不对，也是Base，怎么回事？很简单，复习下上篇的内容就知道：由于d本身没有constructor属性，所以会到d.\_\_proto\_\_上去找，d.\_\_proto\_\_就是Derived.prototype，也就是base这个对象，base也没constructor属性，于是再往上，到base.\_\_proto\_\_上找，也就是Base.prototype。它是有constructor属性的，就是Base本身。事实上，就我目前所知，只有构造器（function类型的object）的prototype，才真正自己拥有constructor属性的对象，且“构造器.prototype.constructor === 构造器”。
 
 
-#####Instanceof
+###Instanceof
 
 那么，instanceof怎么样？
 
@@ -89,7 +89,7 @@ var d =new Derived()
 从图中可以看出，d是Base、Derived和Object的实例。很合理，但这是怎么判断的呢？是这样的：对于x instanceof constructor的表达式，如果constructor.prototype在x的原型(\_\_proto\_\_)链里，那么就返回true。很显然，__d的\_\_proto\_\_链往上依次是：Derived.prototype, Base.prototype, Object.prototype__，得到图中结果就毫无疑问了。所以，instanceof跟对象的constructor属性无关。
 
 
-#####Function and Object
+###Function and Object
 
 最后解答一下文章开头的图。
 
