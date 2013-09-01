@@ -173,4 +173,4 @@ Scope chain的图出来了，那么它用来干嘛呢？执行inner函数的retu
 
  
 
-下篇将对closure进一步阐述，待续。
+[下篇](/javascript/2013/09/01/javascript-4-the-creation-of-closure/ "“闭包”是什么时候创建的")将对closure进一步阐述，待续。
