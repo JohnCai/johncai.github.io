@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "我的Javascript之旅——对象的原型链之由来"
-description: ""
+title: "Javascript必知必会——对象的原型链是如何实现的"
+description: "javascript没有类，只有对象，对象的继承是基于原型链的，那么在javascript内部，原型链是怎么实现的呢？"
 category: Javascript
 tags: [Javascript]
 ---
 {% include JB/setup %}
 
-**note: 迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2010/08/25/1808001.html)**
+**（迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2010/08/25/1808001.html)）**
 
 以问题开始：
 
@@ -56,7 +56,7 @@ JS里没有class，也就没有class里的构造函数，那么object是怎么�
 
 1. 首先当然会创建一个object起来，Base指向这个object。typeof 这个object = “function”　　
 ![Function1](/uploads/201308/function_1.png)
-2. 给Base附上"__proto__"属性，让它等于Function这个构造器的prototype（也是预定义好的）。这是很重要的一步，也是规律性的一步。（规律：）在执行任意类似varx = new X()时，都会把X的prototype赋给x的"__proto__"，也就是说，x."__proto__"和X.prototype此时会指向同一个对象。
+2. 给Base附上\_\_proto\_\_属性，让它等于Function这个构造器的prototype（也是预定义好的）。这是很重要的一步，也是规律性的一步。（规律：）在执行任意类似varx = new X()时，都会把X的prototype赋给x的\_\_proto\_\_，也就是说，x.\_\_proto\_\_和X.prototype此时会指向同一个对象。
 ![Function2](/uploads/201308/function_2.png)
 3. 为Base创建call属性，该属性是个function。因此我们可以这样写：Base.Call()　　　
 ![Function3](/uploads/201308/function_3.png)　　
@@ -73,9 +73,9 @@ Base.prototype = x;
 先把关注点放到2和6。
  
 
-#####“__proto__”和“prototype”
+#####\_\_proto\_\_和“prototype”
 
-从2可以看出来，任意一个用构造器构造出来的object（包括Objects和Functions），都会有__proto__属性，指向该构造器的prototype属性。注意__proto__是个私有属性，在IE上是看不到的，我用的是chrome，可以看到。
+从2可以看出来，任意一个用构造器构造出来的object（包括Objects和Functions），都会有\_\_proto\_\_属性，指向该构造器的prototype属性。注意\_\_proto\_\_是个私有属性，在IE上是看不到的，我用的是chrome，可以看到。
 
 从6可以看出，任意一个用new Function()构造出来的functions，都会有prototype属性，该属性是用new Object()构建出来的，初始公开属性只有一个constructor。
 
@@ -102,7 +102,7 @@ var base= new Base(); // 参见2中的规律，会有base.__proto__ = Base.proto
                       // 所以，base.__proto__.__proto__ = Object.prototype.
 ```
 
-__proto__.__proto__，这就是传说中JS对象的原型链！由于用Function()创建构造器时的关键的第6步，保证了所有object的原型链的顶端，最终都指向了Object.prototype。
+\_\_proto\_\_.\_\_proto\_\_，这就是传说中JS对象的原型链！由于用Function()创建构造器时的关键的第6步，保证了所有object的原型链的顶端，最终都指向了Object.prototype。
 
 ![prototypechain](/uploads/201308/prototypechain.png)
  
@@ -111,11 +111,11 @@ __proto__.__proto__，这就是传说中JS对象的原型链！由于用Function
 
 而我们如果要读某个object的某个属性，JS会怎么做呢？
 
-比如有个object叫xxx，我们执行alert(xxx.a)，也就是读取xxx的a属性，那么JS首先会到xxx本身去找a属性，如果没找到，则到xxx.__proto__里去找a属性，由此沿着原型链往上，找到即返回（没找到，则返回undefined）。可以来看个例子：
+比如有个object叫xxx，我们执行alert(xxx.a)，也就是读取xxx的a属性，那么JS首先会到xxx本身去找a属性，如果没找到，则到xxx.\_\_proto\_\_里去找a属性，由此沿着原型链往上，找到即返回（没找到，则返回undefined）。可以来看个例子：
 
 ![hasOwnProperty](/uploads/201308/hasOwnProperty.png)
 
-上图得知：base本身是没有constructor属性的，但是base.constructor确实能返回Base这个函数，原因就在于base.__proto__有这个属性。（base.__proto__是啥？就是Base.prototype，上面构建Function的第6步的伪代码里，为Base.prototype.constructor赋值为Base本身。）
+上图得知：base本身是没有constructor属性的，但是base.constructor确实能返回Base这个函数，原因就在于base.\_\_proto\_\_有这个属性。（base.\_\_proto\_\_是啥？就是Base.prototype，上面构建Function的第6步的伪代码里，为Base.prototype.constructor赋值为Base本身。）
 
  
 
@@ -133,9 +133,9 @@ __proto__.__proto__，这就是传说中JS对象的原型链！由于用Function
 
 已经得知，
 
-对于 var xxx =new Object(); 有xxx.__proto__= Object.prototype;
+对于 var xxx =new Object(); 有xxx.\_\_proto\_\_= Object.prototype;
 
-对于 var xxx =new Base(); 有xxx.__proto__.__proto__= Object.prototype;
+对于 var xxx =new Base(); 有xxx.\_\_proto\_\_.\_\_proto\_\_= Object.prototype;
 
 看上去很像什么呢？从c#角度看，很像Base是Object的子类，也就是说，由Base()构造出来的object，比由Object()构造出来的object，在原型链上更低一个层级。这是通过把Base.prototype指向由Object()创建的对象来做到的。那么自然而然，如果我想定义一个继承自Base的构造器，只需把改构造器的prototype指向一个Base()构造出来的对象。
 
@@ -146,7 +146,7 @@ Derived.prototype = base;
 var d = newDerived();  //很容易推算出:d.__proto__.__proto__.__proto__ = Object.prototype.
 ```
 
-推算过程：d.__proto__指向Derived.prototype，也就是base；则__proto__.__proto__指向base.__proto__，也就是Base.prototype，也就是某个new object()创建出来的东东，假设是o；则__proto__.__proto__.__proto__指向o.__proto__，也就是Object.prototype。
+推算过程：d.\_\_proto\_\_指向Derived.prototype，也就是base；则\_\_proto\_\_.\_\_proto\_\_指向base.\_\_proto\_\_，也就是Base.prototype，也就是某个new object()创建出来的东东，假设是o；则\_\_proto\_\_.\_\_proto\_\_.\_\_proto\_\_指向o.\_\_proto\_\_，也就是Object.prototype。
 
  
 
@@ -163,4 +163,4 @@ d.constructor会返回什么呢？
 
 ......
 
-待续。
+[待续。](/javascript/2013/08/31/javascript-2-new/ "Javascript必知必会——new以及构造器是如何工作的")

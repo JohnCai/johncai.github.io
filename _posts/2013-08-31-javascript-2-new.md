@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "我的Javascript之旅——new关键字的玄机，以及其它"
-description: ""
+title: "Javascript必知必会——new以及构造器是如何工作的"
+description: "当用new关键字创建一个对象时，都发生了什么？"
 category: Javascript
 tags: [Javascript]
 ---
 {% include JB/setup %}
 
-**note: 迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2010/08/25/1808285.html)**
+**(迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2010/08/25/1808285.html))**
 
-[接上](http://johncai.github.io/javascript/2013/08/24/javascript-1-prototype/ "我的Javascript之旅——对象的原型链之由来")
+[接上!](/javascript/2013/08/24/javascript-1-prototype/ "Javascript必知必会——对象的原型链是如何实现的")
 先看张对老手不新鲜但对菜鸟很有趣的图：
 
 ![1](/uploads/20130831/1.png)
