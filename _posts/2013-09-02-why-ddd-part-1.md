@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "为什么要让我们的“领域模型”裸奔？（上）"
+title: "为什么要让我们的“领域模型”充血裸奔？（上）"
 description: "为什么要Domain-Driven-Design?"
 category: Architect
 tags: [DDD, Domain Model]
