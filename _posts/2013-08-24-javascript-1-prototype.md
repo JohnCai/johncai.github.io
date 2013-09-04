@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "我的Javascript之旅——对象的原型链是如何实现的"
-description: "javascript没有类，只有对象，对象的继承是基于原型链的，那么在javascript内部，原型链是怎么实现的呢？"
+description: "Javascript没有类，只有对象，对象的继承是基于原型链(Scope Chain)的，那么在javascript内部，原型链是怎么实现的呢？"
 category: Javascript
 tags: [Javascript]
 ---

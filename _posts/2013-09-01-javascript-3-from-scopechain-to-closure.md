@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "我的JavaScript之旅——从Scope Chain到Closure"
-description: ""
+description: "Javascript里每个函数(Function)都是运行在一个作用域(Scope)里，而且一个函数的作用域连着外部函数的作用域，像个链条一样，最终指向全局作用域。javascript会沿着这个链条由下而上地去找变量。也就是内部函数可以使用外部函数定义的变量,这就是闭包（Closure）的实现机制。"
 category: Javascript
 tags: [Javascript,Closure,Scope Chain]
 ---

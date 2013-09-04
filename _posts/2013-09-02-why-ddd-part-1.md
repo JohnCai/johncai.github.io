@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "为什么要让我们的“领域模型”充血裸奔？（上）"
-description: "为什么要Domain-Driven-Design?"
+description: "为什么要DDD(Domain Driven Design)? 为什么领域模型（Domain Model）要充血？ 因为解决领域问题才是软件的目的， 持久化、展现则不是。"
 category: Architect
 tags: [DDD, Domain Model]
 ---

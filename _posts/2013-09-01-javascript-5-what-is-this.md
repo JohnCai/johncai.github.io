@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "我的JavaScript之旅——this到底是什么？"
-description: ""
+description: "this关键字是Javascript里最重要的概念之一，初学者容易搞混，想知道how，先知道why。"
 category: Javascript
 tags: [Javascript, this]
 ---

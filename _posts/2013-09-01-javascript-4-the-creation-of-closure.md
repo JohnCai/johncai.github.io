@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "我的JavaScript之旅——“闭包”是什么时候创建的"
-description: ""
+title: "我的JavaScript之旅——Closure（闭包）是什么时候创建的"
+description: "Javascript中什么时候创建的闭包（Closure）？据说它容易引起内存泄露？为什么？垃圾回收（garbage collection）为什么不管它？"
 category: Javascript
 tags: [Javascript, closure]
 ---

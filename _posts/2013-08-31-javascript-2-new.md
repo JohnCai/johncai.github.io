@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "我的Javascript之旅——new以及构造器是如何工作的"
-description: "当用new关键字创建一个对象时，都发生了什么？"
+description: "Javascript里的Function（函数）,可以普通调用，也可以用new关键字来调用（这时这个函数旧事一个构造器），两种方式有什么不同？当用new关键字创建一个对象时，都发生了什么？"
 category: Javascript
 tags: [Javascript]
 ---

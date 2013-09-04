@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "为什么要让我们的“领域模型”充血裸奔？（下）"
-description: ""
+description: "明白了裸奔的重要性，那么具体如何实现裸奔呢？它跟数据库访问层的耦合如何破？为什么要有反馈？为什么要写单元测试？"
 category: Architect
 tags: [DDD, Domain Model, Unit Test]
 ---
