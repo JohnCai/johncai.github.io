@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "快速利用Github Pages搭建个人博客"
-description: ""
-category: 
+title: "快速使用Github Pages搭建个人博客"
+description: "最快速上手，利用Jekyllbootstrap,搭建一个托管在Github Pages上的个人blog"
+category: Howto
 tags: [Github page, Jekyll]
 ---
 {% include JB/setup %}
@@ -26,14 +26,22 @@ gem sources -a http://ruby.taobao.org/
 ```
 
 ###安装本地Jekyll环境
-1. Github很体贴的帮我们做了一个gem。
-`gem install github-pages`
+1. Github很体贴的帮我们做了一个gem。执行安装
+
+```
+gem install github-pages
+```
+
 2. 修复Jekyll不支持UTF-8的问题
-  1. 找到`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.1.2\lib\jekyll\convertible.rb`文件， 
+  1. 找到`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.1.2\lib\jekyll\convertible.rb`文件，
+
   把31行的`self.content = File.read(File.join(base, name))` 
+
   改成`self.content = File.read(File.join(base, name), :encoding => "utf-8")`
   2. 找到`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.1.2\lib\jekyll\tags\include.rb`文件，
+
   把65行的`source = File.read(@file)` 
+
   改成`source = File.read(@file, :encoding => "utf-8")`
 
 ###从Jekyllbootstrap开始
@@ -41,10 +49,13 @@ gem sources -a http://ruby.taobao.org/
 
 1. 进入Gitbash
 执行
+
 ```
 $ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com USERNAME.github.io
 ```
+
 2. 到你的USRERNAME.github.io文件夹下，打开`\_config.yml`文件,
+
 在顶部`pygments: true`下加上一行
 
 `markdown: rdiscount` 或者
@@ -52,12 +63,16 @@ $ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
 `markdown: redcarpet`
 
 (这是因为Github Pages使用的不是标准的Markdown，而是有一点变种，叫[Github flavored markdown](http://github.github.com/github-flavored-markdown/), 上面那句话就是为了使用Github flavored markdown)
+
 3. 本地运行
-进入到你的目录
+
+进入到你的目录，启动Jekyll
+
 ```
 cd USRERNAME.github.io
 jekyll serve
 ```
+
 然后到http://localhost:4000就可以看到你的博客了。
 
 4. 创建第一篇博客
@@ -73,9 +88,19 @@ rake post title="Hello World"
 
 ##push到Github
 相信你在Github上已经建立了USRENAME.github.io的repository。push上去。
+
 ```
 $ cd USERNAME.github.io
 $ git remote set-url origin git@github.com:USERNAME/USERNAME.github.io.git
 $ git push
 ```
+
 然后（也许要等几分钟），到http://USRENAME.github.io就可以看到你博客了
+
+##参考资料
+* [Generating SSH Keys](https://help.github.com/articles/generating-ssh-keys)
+* [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages)
+* [使用Github Pages建独立博客](http://beiyuu.com/github-pages/)
+* [在Windows上建立Jekyll平台](http://pengx17.me/learning/jekyll/2013/06/03/setup-local-jekyll-server-on-windows/)
+* [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+* [Markdown Cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
