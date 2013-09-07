@@ -16,8 +16,8 @@ tags: [Github page, Jekyll]
 2. 安装ruby，注意安装时check一个选项，把它加到PATH里。
 3. 然后双击DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe解压到比如D:\DevKit
 4. 以管理员模式打开cmd，进入到D:\Devkit
-  -1. 先执行 `ruby dk.rb init`
-  -2. 再执行 `ruby dk.rb install`
+  1. 先执行 `ruby dk.rb init`
+  2. 再执行 `ruby dk.rb install`
 5. 默认ruby是从https://rubygems.org下载gem的，我们把它改成淘宝镜像，身为中国人，别问为什么。
 
 ```
