@@ -26,45 +26,32 @@ gem sources -a http://ruby.taobao.org/
 ```
 
 ###安装本地Jekyll环境
-1. Github很体贴的帮我们做了一个gem。执行安装
-
-```
-gem install github-pages
-```
-
-2. 修复Jekyll不支持UTF-8的问题
-  1. 找到`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.1.2\lib\jekyll\convertible.rb`文件，
-
-  把31行的`self.content = File.read(File.join(base, name))` 
-
-  改成`self.content = File.read(File.join(base, name), :encoding => "utf-8")`
-  2. 找到`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.1.2\lib\jekyll\tags\include.rb`文件，
-
-  把65行的`source = File.read(@file)` 
-
-  改成`source = File.read(@file, :encoding => "utf-8")`
+1. Github很体贴的帮我们做了一个gem。执行`gem install github-pages`即可。
+2. 找到`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.1.2\lib\jekyll\convertible.rb`文件，
+     把31行的`self.content = File.read(File.join(base, name))` 
+     改成`self.content = File.read(File.join(base, name), :encoding => "utf-8")`
+3. 找到`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.1.2\lib\jekyll\tags\include.rb`文件，
+     把65行的`source = File.read(@file)` 
+     改成`source = File.read(@file, :encoding => "utf-8")`
 
 ###从Jekyllbootstrap开始
 如果你熟悉Jekyll，你可以开始写博客了，如果不熟悉，请[Jekyllbootstrap](https://github.com/plusjade/jekyll-bootstrap.git)帮我们的忙。
 
-1. 进入Gitbash
+* 进入Gitbash
 执行
 
 ```
-$ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com USERNAME.github.io
+$ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.io
 ```
 
-2. 到你的USRERNAME.github.io文件夹下，打开`\_config.yml`文件,
-
-在顶部`pygments: true`下加上一行
-
-`markdown: rdiscount` 或者
-
-`markdown: redcarpet`
+* 到你的USRERNAME.github.io文件夹下，打开`\_config.yml`文件,
+	在顶部`pygments: true`下加上一行
+		 `markdown: rdiscount` 或者
+		 `markdown: redcarpet`
 
 (这是因为Github Pages使用的不是标准的Markdown，而是有一点变种，叫[Github flavored markdown](http://github.github.com/github-flavored-markdown/), 上面那句话就是为了使用Github flavored markdown)
 
-3. 本地运行
+* 本地运行
 
 进入到你的目录，启动Jekyll
 
@@ -75,7 +62,7 @@ jekyll serve
 
 然后到http://localhost:4000就可以看到你的博客了。
 
-4. 创建第一篇博客
+* 创建第一篇博客
 clone自Jekylllbootstrap以后，其实在\_posts目录下已经有了一篇示例博客，你可以把它删掉，不过建议先留着，作参考。
 我们来创建自己的第一篇博客,先按`ctrl+c`退出本地Jekyll，然后运行
 
