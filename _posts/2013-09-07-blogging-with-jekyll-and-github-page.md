@@ -7,11 +7,11 @@ tags: [Github page, Jekyll]
 ---
 {% include JB/setup %}
 
-###Github上建立Repository
+##Github上建立Repository
 1. 这里假设你已经有个Github账号，知道怎么在本地建立Repository，怎么push到Github上。如果还不知道，参见[这篇官方文章](https://help.github.com/articles/generating-ssh-keys)。
 2. 在Github上创建一个名为USERNAME.github.io的repository（把USRENAME换成你的Github账号）
 
-###安装Ruby
+##安装Ruby
 1. 到[这里](http://rubyinstaller.org/downloads/)下载Ruby 1.9.3-p448（_注意版本_，下面的步骤需要这个版本），以及对应的DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe。
 2. 安装ruby，注意安装时check一个选项，把它加到PATH里。
 3. 然后双击DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe解压到比如D:\DevKit
@@ -25,7 +25,7 @@ gem sources --remove https:/rubygems.org/
 gem sources -a http://ruby.taobao.org/
 ```
 
-###安装本地Jekyll环境
+##安装本地Jekyll环境
 1. Github很体贴的帮我们做了一个gem。执行`gem install github-pages`即可。
 2. 找到`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.1.2\lib\jekyll\convertible.rb`文件，
      把31行的`self.content = File.read(File.join(base, name))` 
@@ -34,7 +34,7 @@ gem sources -a http://ruby.taobao.org/
      把65行的`source = File.read(@file)` 
      改成`source = File.read(@file, :encoding => "utf-8")`
 
-###从Jekyllbootstrap开始
+##从Jekyllbootstrap开始
 如果你熟悉Jekyll，你可以开始写博客了，如果不熟悉，请[Jekyllbootstrap](https://github.com/plusjade/jekyll-bootstrap.git)帮我们的忙。
 
 * 进入Gitbash
