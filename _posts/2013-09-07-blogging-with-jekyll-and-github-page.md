@@ -27,13 +27,16 @@ gem sources -a http://ruby.taobao.org/
 
 ##安装本地Jekyll环境
 1. Github很体贴的帮我们做了一个gem。执行`gem install github-pages`即可。
-2. 找到`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.1.2\lib\jekyll\convertible.rb`文件，
+2. 找到`D:\Ruby200-x64\lib\ruby\gems\2.0.0\gems\jekyll-1.2.1\lib\jekyll\convertible.rb`文件，
 
      把31行的`self.content = File.read(File.join(base, name))` 
+
      改成`self.content = File.read(File.join(base, name), :encoding => "utf-8")`
 
-3. 找到`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.1.2\lib\jekyll\tags\include.rb`文件，
+3. 找到`D:\Ruby200-x64\lib\ruby\gems\2.0.0\gems\jekyll-1.2.1\lib\jekyll\tags\include.rb`文件，
+
      把65行的`source = File.read(@file)` 
+
      改成`source = File.read(@file, :encoding => "utf-8")`
 
 ##从Jekyllbootstrap开始
@@ -42,9 +45,7 @@ gem sources -a http://ruby.taobao.org/
 * 进入Gitbash
 执行
 
-```
-$ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.io
-```
+   `$ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.io`
 
 * 到你的USRERNAME.github.io文件夹下，打开`\_config.yml`文件,
 	在顶部`pygments: true`下加上一行
