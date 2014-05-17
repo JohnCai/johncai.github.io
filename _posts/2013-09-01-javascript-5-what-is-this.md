@@ -12,7 +12,7 @@ tags: [Javascript, this]
 下图是在ASP.NET中为button挂上客户端onclick事件的两种办法：图中的2和3/1。 结果发现两种方式调用同样一个函数clickMe，this却不一样。　
 ![asp.net](/uploads/20130901/aspnet.png)
 
-如果采用3或1的做法，那么点击button1后将alert出[object DOMWindow]；而采用2的做法，将alert出 [object HTMLInputElement]（在chrome下测试。）
+如果采用3或1的做法，那么点击button1后将alert出\[object DOMWindow\]；而采用2的做法，将alert出 \[object HTMLInputElement\]（在chrome下测试。）
 
 显然，在1的做法中，this指向DOMWindow，也就是全局的object——global；而2的做法中，this指向Button1这个元素。
 
@@ -28,13 +28,13 @@ tags: [Javascript, this]
 
 　　方式1和2对clickMe的调用，不同之处在于：1中clickMe是被button1.onclick所指向的函数调用的，2中clickMe是作为button1.onclick属性直接调用的。因此对于clickMe函数，1中的this指向“拥有”clickMe函数的对象——global（DOMWindow），而2中的this指向“拥有”onclick属性的对象——button1。
 
-　　可惜对像我这种写JS写的不多的人来说，总是记不住这个简单答案，因为它只告诉我what，没有告诉我why。本文试图从ECMAScript官方文档出发，从原理上说明：__在不同的场合中，函数的this到底是什么？__
+　　可惜对像我这种写JS写的不多的人来说，总是记不住这个简单答案，因为它只告诉我what，没有告诉我why。本文试图从ECMAScript官方文档出发，从原理上说明：**在不同的场合中，函数的this到底是什么？**
 
  
 
 ##call和apply
 
-　　首先明确一点，在最正常的情况下，我们这样调用：Func()，这时this是由JavaScript来确定的，这也是本篇要研究的主题。而如果用Func.call(thisArg,  arg1, arg2, ...)或者Func.apply(thisArg, [arg1, arg2, ...])来调用时，this是我们自己传进去的（作为call或apply的第一个参数）。如果我们不传this进去，或者传null进去，会怎样？这时this将会是global object。
+　　首先明确一点，在最正常的情况下，我们这样调用：Func()，这时this是由JavaScript来确定的，这也是本篇要研究的主题。而如果用Func.call(thisArg,  arg1, arg2, ...)或者Func.apply(thisArg, \[arg1, arg2, ...\])来调用时，this是我们自己传进去的（作为call或apply的第一个参数）。如果我们不传this进去，或者传null进去，会怎样？这时this将会是global object。
 
 ![this1](/uploads/20130901/this1.png)
 　　
