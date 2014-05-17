@@ -54,12 +54,18 @@ JS里没有class，也就没有class里的构造函数，那么object是怎么�
 
 当执行function Base(){this.a = 1}时，相当于var Base = new Function(“this.a = 1”)，也就是说，这行代码本身，将使用预定义好的Function() constructor，来构造一个function型object(即Base)出来。在这个创建过程中，js将做哪些事呢？
 
-1. 首先当然会创建一个object起来，Base指向这个object。typeof 这个object = “function”　　
-![Function1](/uploads/201308/function_1.png)
+1. 首先当然会创建一个object起来，Base指向这个object。typeof 这个object = “function”
+
+  ![Function1](/uploads/201308/function_1.png)
+
 2. 给Base附上\_\_proto\_\_属性，让它等于Function这个构造器的prototype（也是预定义好的）。这是很重要的一步，也是规律性的一步。（规律：）在执行任意类似varx = new X()时，都会把X的prototype赋给x的\_\_proto\_\_，也就是说，x.\_\_proto\_\_和X.prototype此时会指向同一个对象。
-![Function2](/uploads/201308/function_2.png)
-3. 为Base创建call属性，该属性是个function。因此我们可以这样写：Base.Call()　　　
-![Function3](/uploads/201308/function_3.png)　　
+
+  ![Function2](/uploads/201308/function_2.png)
+
+3. 为Base创建call属性，该属性是个function。因此我们可以这样写：Base.Call()
+
+  ![Function3](/uploads/201308/function_3.png)
+  
 4. 为Base创建Construct属性，该属性也是个function。在执行var base = new Base()时，即会调用这个Construct属性。
 5. 为Base创建Scope，Length等属性，略。
 6. 为Base创建prototype属性：先用new Object()创建一个对象，为这个对象创建一个属性叫constructor，该属性值设置为Base。再把Base的prototype设置为这个新创建的对象。伪代码如下：
