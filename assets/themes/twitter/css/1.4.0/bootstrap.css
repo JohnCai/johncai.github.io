@@ -97,7 +97,7 @@ hr{margin:20px 0 19px;border:0;border-bottom:1px solid #eee;}
 strong{font-style:inherit;font-weight:bold;}
 em{font-style:italic;font-weight:inherit;line-height:inherit;}
 .muted{color:#bfbfbf;}
-blockquote{margin-bottom:18px;border-left:5px solid #eee;padding-left:15px;}blockquote p{font-size:14px;font-weight:300;line-height:18px;margin-bottom:0;}
+blockquote{margin-bottom:18px;border-left:5px solid #eee;padding-left:15px;}blockquote p{font-size:12px;font-weight:300;line-height:18px;margin-bottom:0;color:rgb(118, 131, 131);}
 blockquote small{display:block;font-size:12px;font-weight:300;line-height:18px;color:#bfbfbf;}blockquote small:before{content:'\2014 \00A0';}
 address{display:block;line-height:18px;margin-bottom:18px;}
 code{padding:0 3px 2px;font-family:Monaco,Menlo,Consolas,"Courier New",monospace;font-size:12px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
