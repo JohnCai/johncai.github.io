@@ -1,0 +1,9 @@
+---
+layout: page
+title : About
+header : About
+group: navigation
+---
+
+{% capture my_include %}{% include custom/cv.md %}{% endcapture %}
+{{ my_include | markdownify }}
