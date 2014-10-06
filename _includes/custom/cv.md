@@ -1,6 +1,3 @@
-
-
- 
 #蔡建斌 John Cai
 #Tech Lead and Manager
 
@@ -56,5 +53,16 @@ Developing a POS system for restaurants management, using Delphi.  Being respons
 University of Science and Technology of China <span class="timeline">(1998.09 - 2003.06)</span>
 
 
-##Language ability: English, Mandarin  
+##Language ability
+English, Mandarin  
 
+##Puplication
+
+- co-author: [敏捷开发一千零一夜](http://item.jd.com/11281352.html)
+- translator: [ElasticSearch Server实战](http://www.ituring.com.cn/book/1447)
+
+##Contacts
+
+- email: caijianbin93@gmail.com
+- phone: 18621969393
+- blog: http://johncai.github.io/

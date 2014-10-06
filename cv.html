@@ -1,0 +1,11 @@
+---
+layout: page
+title : resume
+header : About
+group: navigation1
+css:
+    - about.css
+---
+
+{% capture my_include %}{% include custom/cv.md %}{% endcapture %}
+{{ my_include | markdownify }}
