@@ -14,13 +14,32 @@ experienced in customer collaboration, project management, architecture, SDLC, t
 
 I am now the technical owner of the web based CRM application. Focusing on high level design; evolving the architecture and tuning the performance, to support the growing business; mentoring and leading team members; doing code reviews and design reviews, doing pair programming; optimizing BI system; introducing new front-end and back-end frameworks to the system; strengthening engineering practices such as Continuous Integration, ATDD, TDD.  
 
-At the mean time, as a manager, I guide and develop people who report to me, including QAs, front-end developers, and back-end developers.
+At the mean time, as a manager, I mentor and develop people who report to me, including QAs, front-end developers, and back-end developers.
+
+Achivement:
+
+1. Successfully change release cycle from monthly to weekly, through setting up proper working agreement, strengthening automation tests and continious integration practice, setting up one-click deployment.
+1. Introduce practice such as Impact Mapping to the development team, so that the team can come up with much better solution to the business.
+1. Successfully train the team and switch the source control system from TFS to GIT.
+1. Successfully build learning culture in team. for example, for last 18 months, the team has regular weekly technical salon.
+1. Connect team members with Agile community, we now have 2 organizers of Agile Tour, 3 volunteers of Scrum Gathering, and 5 Certified Scrum Masters.
+1. Introduce Angular.js into system and set up automation test for javascript, to improve the front-end code quality.
+1. Introduce Domain Event pattern and RabbitMq into system, to discouple the modules, and improve the performance of web application by processing long-run tasks in background service.
+1. Improve the performance of web application, the average application server response time decreased from 750ms to 150ms, and average page load time decreased from 3.5 seconds to 1.8 seconds.
+1. Improve the processing performance of data warehouse and cube. the processing time decreased from 9.5 hours to 4 hours.
+
 
 
 **Senior Developer and Scrum Master**, English First					<span class="timeline">2011.02 – 2013.01</span>
 
 As a Senior Developer, my daily job includes analyzing business requirement, applying Domain-Driven Design, writing readable and high-quality code and automation tests (including unit tests, integration tests and UI automation tests), tuning performance, etc.
 As a Scrum Master, I introduce Agile methodology to the team, and provide training, run Scrum.
+
+Achivement:
+
+1. Set up the first Scrum team and Scrum process in EF global RnD center.
+1. Introduce XP practices to the team, such as code review, pair programming, TDD, CI, etc.
+1. Successfully release the new CRM system to global market, including China, Russia and Indonesia.1
 
 
 **Tech Lead**, CDC Software								<span class="timeline">2010.01 – 2011.01</span>
@@ -58,11 +77,11 @@ English, Mandarin
 
 ##Puplication
 
-- co-author: [敏捷开发一千零一夜](http://item.jd.com/11281352.html)
-- translator: [ElasticSearch Server实战](http://www.ituring.com.cn/book/1447)
+- co-author: [敏捷开发一千零一夜](http://item.jd.com/11281352.html) http://item.jd.com/11281352.html
+- translator: [ElasticSearch Server实战](http://www.ituring.com.cn/book/1447) http://www.ituring.com.cn/book/1447
 
 ##Contacts
 
-- email: caijianbin93@gmail.com
+- email: caijianbin93@126.com
 - phone: 18621969393
 - blog: http://johncai.github.io/
