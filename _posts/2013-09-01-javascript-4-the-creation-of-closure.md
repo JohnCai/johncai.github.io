@@ -5,7 +5,7 @@ description: "Javascript中什么时候创建的闭包（Closure）？据说它�
 category: Javascript
 tags: [Javascript, closure]
 ---
-{% include JB/setup %}
+
 **(迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2010/09/14/1826287.html))**
 
 ```javascript

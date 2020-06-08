@@ -5,7 +5,6 @@ description: "最快速上手，利用Jekyllbootstrap,搭建一个托管在Githu
 category: Howto
 tags: [Github page, Jekyll]
 ---
-{% include JB/setup %}
 
 ##Github上建立Repository
 1. 这里假设你已经有个Github账号，知道怎么在本地建立Repository，怎么push到Github上。如果还不知道，参见[这篇官方文章](https://help.github.com/articles/generating-ssh-keys)。

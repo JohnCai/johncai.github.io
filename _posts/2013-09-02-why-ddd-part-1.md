@@ -5,7 +5,6 @@ description: "为什么要DDD(Domain Driven Design)? 为什么领域模型（Dom
 category: Architect
 tags: [DDD, Domain Model]
 ---
-{% include JB/setup %}
 
 **(迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2011/05/08/2040026.html))**
 

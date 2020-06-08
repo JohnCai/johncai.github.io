@@ -5,7 +5,6 @@ description: "Javascript没有类，只有对象，对象的继承是基于原�
 category: Javascript
 tags: [Javascript]
 ---
-{% include JB/setup %}
 
 **（迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2010/08/25/1808001.html)）**
 

@@ -5,7 +5,6 @@ description: "明白了裸奔的重要性，那么具体如何实现裸奔呢？
 category: Architect
 tags: [DDD, Domain Model, Unit Test]
 ---
-{% include JB/setup %}
 
 **(迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2011/05/09/2041578.html))**
 

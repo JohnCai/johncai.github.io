@@ -5,7 +5,6 @@ description: "Javascript里每个函数(Function)都是运行在一个作用域(
 category: Javascript
 tags: [Javascript,Closure,Scope Chain]
 ---
-{% include JB/setup %}
 
 **(迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2010/09/05/1818493.html))**
 

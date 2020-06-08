@@ -5,7 +5,6 @@ description: "Javascript里的Function（函数）,可以普通调用，也可�
 category: Javascript
 tags: [Javascript]
 ---
-{% include JB/setup %}
 
 **(迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2010/08/25/1808285.html))**
 

@@ -5,7 +5,6 @@ description: "this关键字是Javascript里最重要的概念之一，初学者�
 category: Javascript
 tags: [Javascript, this]
 ---
-{% include JB/setup %}
 
 **(迁移自[博客园](http://www.cnblogs.com/CaiAbin/archive/2010/09/25/1834797.html))**
 

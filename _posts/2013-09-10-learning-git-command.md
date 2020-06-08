@@ -5,7 +5,6 @@ description: "使用Git的过程中，总会搞砸一些事情。比如commit错
 category: Howto
 tags: [Git]
 ---
-{% include JB/setup %}
 
 ##pull之后发现忘记加--rabase参数了
 我本地做了若干commit，准备push到remote，push前我需要pull一下，merge别人的工作： 
