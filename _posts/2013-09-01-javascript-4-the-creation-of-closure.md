@@ -41,7 +41,7 @@ var result = Outer()(2); //3
 
  
 
-##Variable object的实例化三部曲
+## Variable object的实例化三部曲
 
 我们已经知道，当JS执行时碰到一个变量，它会到scope chain里递归去找，而scope chain是由variable object和global object组成的一个object chain，global object包含JS预定义好的所有object，function的variable object则会包含函数内声明的所有东西，包括function的参数、内部函数、局部变量。创建Variable object的过程有三步，上篇有写过，这边是[官方的文档](http://bclary.com/2004/11/07/#a-10.1.3)。简述如下：
 
@@ -53,7 +53,7 @@ var result = Outer()(2); //3
 
  
 
-##function declaration vs. function statement
+## function declaration vs. function statement
 
 下面就是一个function declaration:　　
 
@@ -98,7 +98,7 @@ var A = function A(){
 ![1](/uploads/20130901/4.png)
 
 
-##闭包的创建时机
+## 闭包的创建时机
 
 对于开头的这段代码：
 
@@ -125,7 +125,7 @@ var inner1 = Outer();
 
 
 
-##garbage collection
+## garbage collection
 
 很多人都听过闭包容易引起内存泄露。为什么呢？因为如上所述，inner1变量对x有间接引用，而inner1是声明在global context下的一个变量，它在global context下随时可以被用，那么JS的垃圾回收器就不会回收它（inner1），当然也就不会回收它所引用的x——直到退出global context，也就是我们关掉网页的时候。
 

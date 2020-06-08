@@ -6,7 +6,7 @@ category: Howto
 tags: [Git]
 ---
 
-##pull之后发现忘记加--rabase参数了
+## pull之后发现忘记加--rabase参数了
 我本地做了若干commit，准备push到remote，push前我需要pull一下，merge别人的工作： 
 
 `git pull`。
@@ -23,7 +23,7 @@ __方案:__
 
 事实上 git reflog可以做很多事。参加[这篇](http://stackoverflow.com/questions/134882/undoing-a-git-rebase)
 
-##想把上次或上上次的版本拿出来看看
+## 想把上次或上上次的版本拿出来看看
 我当前在master最新版本上，可是好像有个Unit Test没通过，可是不像是这次commit引起的，那么我想看看上个版本是不是也有这个问题？
 
 用`git checkout HEAD~1`,重复运行它，将一直往回走。（显然 `git checkout HEAD~2`就是上上个版本了。）
@@ -32,7 +32,7 @@ __方案:__
 
 `git checkout master`即可。
 
-##本地白做了，想全部作废——git clean与git reset双剑合璧
+## 本地白做了，想全部作废——git clean与git reset双剑合璧
 我在本地做了很多修改：修改了已存在的文件，增加了文件，还增加了文件夹。
 
 我还没有commit，不过我发现我做的都是废活，白做了，需要全部作废，回到“干净”的状态。
@@ -65,7 +65,7 @@ __可是我已经执行过`git add .`了。__
 
 note: _git reset_ only apply to tracked files, need _git clean_ to clean untracked fiels
 
-##想undo上一个commit怎么办？
+## 想undo上一个commit怎么办？
 
 git reset有三种模式：soft，hard，default
 
@@ -75,10 +75,10 @@ git reset有三种模式：soft，hard，default
 
 `git reset --hard head~1`: 这个最猛，回到上个commit，本地鸡犬不留。
 
-##commit之后发现注释写错了
+## commit之后发现注释写错了
 `git commit --amend -m "update comments here"`:不会产生新的commit，只是修正上次commit。
 
-##commit并push之后发现注释写错了
+## commit并push之后发现注释写错了
 `git commit --amend -m "update comments here"`
 
 之后，还需push这次amend到remote

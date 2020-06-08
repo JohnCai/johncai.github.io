@@ -21,7 +21,7 @@ inner(2);
 执行上面这段代码的过程中，有哪些事情发生？Inner函数为什么可以引用Outer函数的参数x？closure是怎么实现的？本文试图回答这些问题。
 
  
-##术语
+## 术语
 
 本文虽然所讲理论并不复杂，但用到不少名词，初读时相对比较晦涩，下面列出术语和简短解释，便于阅读时随时查看。
 
@@ -38,7 +38,7 @@ inner(2);
 * __innerScopeChain__：本文术语，用作表示innerFunctionContext所拥有的Scope Chain。可用[innerVariable, outerVariable, global]表示。
  
 
-##JS代码种类
+## JS代码种类
 
 JS代码分三种：
 
@@ -47,7 +47,7 @@ JS代码分三种：
 3. Eval code，为简单计，不在本文说明。
  
 
-##Execution context
+## Execution context
 
 任何一句JS代码，都是执行在一个特定的__execution context__下面。
 
@@ -68,18 +68,18 @@ var inner = Outer(1); //执行Outer函数时进入新创建的outerFunctionConte
 inner(2);  //进入InnerContext，执行Inner函数的return x + y，然后退出，回到globalContext
 ```
 
-##Scope Chain
+## Scope Chain
 
 每个execution context都有一个关联的Scope Chain。所谓Scope Chain，其实就是一个List，里面有若干个object。
 
  
-##global
+## global
 
 globalContext所关联的Scope Chain，这里不妨称之为globalScopeChain，这个chain里面只有一个object，就是global，global是一个engine事先创建好的对象，所有的built-in Object（比如Function()、Object()、Math）都会作为这个global对象的属性。
 
  
 
-##Function型对象的[[Scope]]属性
+## Function型对象的[[Scope]]属性
 
 在[第一篇](/javascript/2013/08/24/javascript-1-prototype/ "我的Javascript之旅——对象的原型链是如何实现的")创建Function型对象的步骤里，第5步说了，会为这个Function型对象创建一个[[Scope]]属性，不过当初没有提到，这个属性的值是当前context的Scope Chain。
 
@@ -87,7 +87,7 @@ Outer函数是在globalContext下创建起来的，因此Outer.[[Scope]] = globa
 
  
 
-##Entering execution context
+## Entering execution context
 
 每次进入一个context（不管是globaContext还是functionContext）时，都会有一系列的事情发生。
 
@@ -156,7 +156,7 @@ inner(2);  //最后执行的这句代码，将创建并进入InnerContext。
 
  
 
-##初步结论
+## 初步结论
 
 现在已经知道，执行Outer函数时，对应的outerScopeChain的图如下，注意global对象忽略了指向所有built-in object的属性：
 
@@ -166,7 +166,7 @@ inner(2);  //最后执行的这句代码，将创建并进入InnerContext。
 执行Inner函数时，对应的innerScopeChain的图如下：
 ![innerScopeChain](/uploads/20130901/innerScopeChain.png)　
 
-##Scope Chain的作用
+## Scope Chain的作用
 
 Scope chain的图出来了，那么它用来干嘛呢？执行inner函数的return x + y，会发现，我们需要两个变量，x和y。那么JavaScript将循着Scope Chain来查找，与\_\_proto\_\_链配合，也就是首先在innerVariable（以及其\_\_proto\_\_链）找x，没找到，则到outerVariable中找x，找到为1。 找y时类似。这就是Inner函数体中，可以访问得到Outer函数中定义的参数x的原理所在，不难想象，如果Outer函数中定义了局部变量z，那么z也会出现在outerVariable对象中，因此同样可以被Inner函数访问。内部函数可以引用外部函数的参数以及变量，这就是JavaScript传说中的__闭包(Closure)__。
 

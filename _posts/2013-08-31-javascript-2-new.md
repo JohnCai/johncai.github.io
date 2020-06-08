@@ -15,7 +15,7 @@ tags: [Javascript]
 
 What the heck is that? 简直是luan lun。 
 
-##new
+## new
 
 抛开上面的图，先看看上篇文章留下的第二个问题，让我们在构造器的函数体内加点东西，看会发生什么。
  
@@ -58,7 +58,7 @@ return x;
 
  
 
-##对象的constructor属性
+## 对象的constructor属性
 
 再看看上篇文章留下的第一个问题
 
@@ -79,7 +79,7 @@ var d =new Derived()
 不对，也是Base，怎么回事？很简单，复习下上篇的内容就知道：由于d本身没有constructor属性，所以会到d.\_\_proto\_\_上去找，d.\_\_proto\_\_就是Derived.prototype，也就是base这个对象，base也没constructor属性，于是再往上，到base.\_\_proto\_\_上找，也就是Base.prototype。它是有constructor属性的，就是Base本身。事实上，就我目前所知，只有构造器（function类型的object）的prototype，才真正自己拥有constructor属性的对象，且“构造器.prototype.constructor === 构造器”。
 
 
-##Instanceof
+## Instanceof
 
 那么，instanceof怎么样？
 
@@ -88,7 +88,7 @@ var d =new Derived()
 从图中可以看出，d是Base、Derived和Object的实例。很合理，但这是怎么判断的呢？是这样的：对于x instanceof constructor的表达式，如果constructor.prototype在x的原型(\_\_proto\_\_)链里，那么就返回true。很显然，__d的\_\_proto\_\_链往上依次是：Derived.prototype, Base.prototype, Object.prototype__，得到图中结果就毫无疑问了。所以，instanceof跟对象的constructor属性无关。
 
 
-##Function and Object
+## Function and Object
 
 最后解答一下文章开头的图。
 
