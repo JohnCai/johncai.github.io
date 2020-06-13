@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "全员 QA 的四种实践"
-category: [TDD]
-tags: [TDD]
+category: [TDD, 技术管理]
+tags: [质量]
 ---
 
 上篇《代码写完了，QA 可以测了》用了“流氓”码农们的一些典型语录，来说明工匠对于测试的一些价值观：
