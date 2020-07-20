@@ -16,14 +16,13 @@ tags: [Scrum, Agile]
 > - What will I do today to help the Development Team meet the **Sprint Goal**?  
 > - Do I see any impediment that prevents me or the Development Team from meeting the **Sprint Goal**?
 
-### Sprint 内的工作项可以修改吗？
+### Sprint 的 Scope 可以修改吗？
 
-十几年来都会持续地听到一个以讹传讹的说法：「一个 Sprint 内的工作项不能修改；实在不得已时，加一个工作项前必须移除一个工作项。」
+十几年来都会持续地听到一个以讹传讹的说法：「一个 Sprint 的 Scope 不能修改；实在不得已时，加一个工作项前必须移除一个工作项。」
 
 我很早以前也是相信这种说法的，直到有一天意识到，这不是跟「敏捷宣言」说的「响应变化高于遵循计划」相违背吗？
 
-我于是去看了下官方的 Scrum Guide，发现里面写的很清楚：
-
+我于是又翻了一下 Scrum Guide，发现里面写的很清楚：
 > During the Sprint:  
 > - No changes are made that would endanger the **Sprint Goal**;   
 > - Quality goals do not decrease; and,   
@@ -37,7 +36,7 @@ Sprint Goal 是不能被伤害的，也就是不能改变；但是 Scope 可以�
 
 如果 Sprint Goal 过时了，Sprint 都可以被取消。
 
-这几乎等于在说，没有 Sprint Goal，就没有 Sprint。
+**这几乎等于在说，没有 Sprint Goal，就没有 Sprint。**
 
 所以，不是「两周」就叫 Sprint，两周后需要达到一个目的，才叫 Sprint。
 
@@ -56,7 +55,7 @@ Sprint Goal 是不能被伤害的，也就是不能改变；但是 Scope 可以�
 1. 它承载着项目的里程碑。每个 Sprint 都完成一个里程碑，这就是 Scrum 里 Incremental 的意思。
 2. 它对齐了团队每个人的目标，而如何完成这个目标 （做哪些 Story，用什么样的顺序做），则交由团队自行决定和调整。
 
-### 如何定义 Sprint Goal？
+### 如何设置 Sprint Goal？
 
 Sprint Goal 不是 Sprint Backlog 本身，而是通过完成 Sprint Backlog，所要达到的目的。
 
