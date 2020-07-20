@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "用户故事三品"
-category: [技术管理, SCRUM]
+category: [技术管理, Scrum]
 tags: [User Story]
 ---
 

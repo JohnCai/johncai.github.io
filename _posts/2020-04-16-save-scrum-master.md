@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "SCRUM MASTER 的精进框架"
-category: [技术管理, SCRUM]
-tags: [SCRUM, 领导力]
+category: [技术管理, Scrum]
+tags: [Scrum, 领导力]
 ---
 
 > 敏捷转型几年了，在开始的喧嚣过后，怎么持续让团队有质的提升？ ——研发经理小A
