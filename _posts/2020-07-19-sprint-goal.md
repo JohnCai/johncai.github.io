@@ -37,10 +37,11 @@ Sprint Goal 是不能被伤害的，也就是不能改变；但是 Scope 可以�
 
 如果 Sprint Goal 过时了，Sprint 都可以被取消。
 
+这几乎等于在说，没有 Sprint Goal，就没有 Sprint。
+
 所以，不是「两周」就叫 Sprint，两周后需要达到一个目的，才叫 Sprint。
 
-
-先讲一个正面的故事。
+### 一个成功的故事
 
 有一次我们团队接到一个较为复杂的任务，必须在 9 周内完成。
 
@@ -57,7 +58,7 @@ Sprint Goal 是不能被伤害的，也就是不能改变；但是 Scope 可以�
 
 ### 如何定义 Sprint Goal？
 
-Sprint Goal 不是 Sprint Backlog 本身，而是通过完成 Sprint Backlog，达到了什么目的？
+Sprint Goal 不是 Sprint Backlog 本身，而是通过完成 Sprint Backlog，所要达到的目的。
 
 这个目的可以有三种类型：
 1. Earn Business Value （实现了什么业务价值？）
@@ -83,4 +84,4 @@ Sprint Goal 不是 Sprint Backlog 本身，而是通过完成 Sprint Backlog，�
 1. 设置 Sprint Goal，是让团队关注价值，关注里程碑，关注目的；而对手段（User Story 是手段）保留随时更新的选择。
 1. 建议草拟往后若干个（而不是 1 个）Sprint 的 Goal，并且每个 Sprint 滚动更新。这是以终为始的思维。
 
-把 Sprint Goal 用好是让 Scrum 免于僵化的一个突破口，您同意吗？
+把 Sprint Goal 用好是让 Scrum 免于僵化的一个突破口，试试吧！
