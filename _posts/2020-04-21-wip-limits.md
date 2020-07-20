@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "限制在制品没效果？因为少了这两个实践"
-category: [技术管理, SCRUM]
+category: [技术管理, Scrum]
 tags: [WIP]
 ---
 
