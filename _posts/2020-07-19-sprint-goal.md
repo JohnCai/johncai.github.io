@@ -28,13 +28,13 @@ tags: [Scrum, Agile]
 > - Quality goals do not decrease; and,   
 > - **Scope may be clarified and re-negotiated** between the Product Owner and Development Team as more is learned.
 
-Sprint Goal 是不能被伤害的，也就是不能改变；但是 Scope 可以协商。
+不能改变的是 Sprint Goal；在此前提下，Scope 可以协商。
 
 ### 被忽略的 Sprint Goal
 如果上面两段引用还不足以引起您对 Sprint Goal 的重视，那么我再引用一段：
 > A Sprint would be cancelled if the **Sprint Goal** becomes obsolete.
 
-如果 Sprint Goal 过时了，Sprint 都可以被取消。
+如果 Sprint Goal 过时了，Sprint 可被取消。
 
 **这几乎等于在说，没有 Sprint Goal，就没有 Sprint。**
 
@@ -42,14 +42,14 @@ Sprint Goal 是不能被伤害的，也就是不能改变；但是 Scope 可以�
 
 ### 一个成功的故事
 
-有一次我们团队接到一个较为复杂的任务，必须在 9 周内完成。
+有一次我们团队接到一个较为复杂的任务，它对其它 3 个团队都有依赖，必须在 9 周内完成。
 
 我们的做法是：
 1. 用了几天做了一个 POC，然后快速做了技术选型。
 2. 剩下 8 周多的时间，我们分成 4 个 Sprint，把这个任务分解成了 4 个里程碑，分别作为每个 Sprint 的 Goal。
-3. 每天的早会，整个团队关注的是这个 Sprint 的 Goal 能不能达成；而 Sprint 内的 Story，则根据每天的进度和学到的东西，不断地调整中。
+3. 每天的早会，所有人（我们团队 + 其它 3 个团队各派了一名代表）关注的是这个 Sprint 的 Goal 能不能达成；而 Sprint 内的 Story，则根据每天的进度和学到的东西，不断地调整。
 
-最后的结果，这个任务完成地异常顺利。
+最后的结果，这个任务完成地非常顺利。
 
 这就是 Sprint Goal 的威力：
 1. 它承载着项目的里程碑。每个 Sprint 都完成一个里程碑，这就是 Scrum 里 Incremental 的意思。
@@ -64,7 +64,9 @@ Sprint Goal 不是 Sprint Backlog 本身，而是通过完成 Sprint Backlog，�
 1. Earn Architectural Value （实现了什么架构价值？）
 1. Learn Something （团队学到了什么？）
 
-上面提到的故事，我们的任务是让客户端无感知的前提下，迁移几组共计上百个 API，技术选型是 API Gateway。
+所以，**「完成 XXX 的开发」，一定不是好的 Sprint Goal。**
+
+以上面提到的故事为例，我们的任务是让客户端无感知的前提下，迁移几组共计上百个 API，技术选型是 API Gateway。
 
 而我们第一个 Sprint 的目标是通过把其中 1 个 API Gateway 部署到生产环境，并且完成所有客户端的联调，去证明我们的技术选型是可工作的。
 
@@ -72,15 +74,13 @@ Sprint Goal 不是 Sprint Backlog 本身，而是通过完成 Sprint Backlog，�
 
 容易犯的错是：前几个 Spint 的目标都是开发那些 API，但是直到最后一个 Sprint 才部署到生产环境，这就不是增量（Incremental），而是瀑布。
 
-设置 Sprint Goal 的时候。
-1. 前面的 1 个或几个 Sprint，往往要关注 RAID （Risk, Assumption, Issue, Dependency）的消除，这就是 Learn；
-1. 后面的 Sprint 才是收获，要么收获业务价值（用户直接得利），要么收获架构价值（架构演进），这就是 Earn。
-
 如果一个 Goal 设置下来，上述 3 种目的都没有达到，需要反思一下 Goal 设置得是否合适？
 
 ### 结尾
 总结一下，
 1. 设置 Sprint Goal，是让团队关注价值，关注里程碑，关注目的；而对手段（User Story 是手段）保留随时更新的选择。
 1. 建议草拟往后若干个（而不是 1 个）Sprint 的 Goal，并且每个 Sprint 滚动更新。这是以终为始的思维。
+    1. 前面的 1 个或几个 Sprint，往往要关注 RAID （Risk, Assumption, Issue, Dependency）的消除，这就是 Learn；
+    1. 后面的 Sprint 才是收获，要么收获业务价值（用户直接得利），要么收获架构价值（架构演进），这就是 Earn。
 
 把 Sprint Goal 用好是让 Scrum 免于僵化的一个突破口，试试吧！
