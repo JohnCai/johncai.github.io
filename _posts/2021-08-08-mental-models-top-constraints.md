@@ -5,6 +5,7 @@ category: [Mental Models]
 tags: [Mental]
 ---
 
+### 一个故事片段
 这个预期 18 个月完成的新产品，已经进行了 9 个月了，进度严重落后。
 
 
